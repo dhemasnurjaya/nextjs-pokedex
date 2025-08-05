@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       new URL(
-        "https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/**",
+        "https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/**"
       ),
     ],
   },

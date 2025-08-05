@@ -37,7 +37,7 @@ export default function SpeciesPagination(props: SpeciesPaginationProps) {
       case "page":
         urlSearchParams.set(
           "page",
-          paginationProps.pageNumber?.toString() ?? "",
+          paginationProps.pageNumber?.toString() ?? ""
         );
         break;
       case "next":
@@ -116,7 +116,7 @@ function PaginationButton({
 
 function generatePagination(
   currentPage: number,
-  totalPages: number,
+  totalPages: number
 ): PaginationProps[] {
   const window = 3;
   const expectedRange = window * 2;

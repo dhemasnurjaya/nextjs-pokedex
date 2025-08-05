@@ -4,8 +4,8 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "./components/navigation-menu";
-import Pokeball from "./pokeball";
+} from "@/ui/components/navigation-menu";
+import Pokeball from "@/ui/pokeball";
 
 const navigationMenu = [
   { label: "Species", href: "/species" },

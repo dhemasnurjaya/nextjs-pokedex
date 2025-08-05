@@ -1,5 +1,5 @@
 export default interface Species {
-  id: number;
+  id: string;
   name: string;
   genus: string;
   types: string;

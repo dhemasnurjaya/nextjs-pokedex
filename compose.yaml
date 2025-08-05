@@ -1,0 +1,7 @@
+services:
+  nextjs-pokedex:
+    build: .
+    container_name: nextjs-pokedex
+    ports:
+      - "3000:3000"
+    user: nextjs

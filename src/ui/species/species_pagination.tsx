@@ -9,11 +9,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/ui/components/pagination";
-import {
-  ReadonlyURLSearchParams,
-  usePathname,
-  useSearchParams,
-} from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 
 type SpeciesPaginationProps = {
   totalPages: number;

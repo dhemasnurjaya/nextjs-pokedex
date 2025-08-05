@@ -1,17 +1,19 @@
-import { Database } from "sqlite";
+import SpeciesModel from "@/data/local/models/species_model";
+import { parse } from "csv-parse/sync";
+import { promises as fs } from "fs";
 
 export default interface PokemonLocalSource {
-  read<TResult>(sql: string, params?: unknown[]): Promise<TResult[]>;
+  readSpecies(): Promise<SpeciesModel[]>;
 }
 
 export class PokemonLocalSourceImpl implements PokemonLocalSource {
-  private readonly db: Database;
-
-  constructor(db: Database) {
-    this.db = db;
-  }
-
-  read<TResult>(sql: string, params?: unknown[]): Promise<TResult[]> {
-    return this.db.all<TResult[]>(sql, params ?? []);
+  async readSpecies(): Promise<SpeciesModel[]> {
+    const csvContent = await fs.readFile("db/species.csv", "utf-8");
+    const records = parse(csvContent, {
+      delimiter: ";",
+      skipEmptyLines: true,
+      columns: true,
+    }) as SpeciesModel[];
+    return records;
   }
 }

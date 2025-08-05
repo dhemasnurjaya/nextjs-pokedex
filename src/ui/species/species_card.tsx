@@ -2,9 +2,9 @@ import Species from "@/domain/entities/species";
 import Image from "next/image";
 import SpeciesBackground from "@/ui/species/species_background";
 import SpeciesTypeChips from "@/ui/species/species_type_chips";
-import { Card } from "../components/card";
+import { Card } from "@/ui/components/card";
 
-function padId(id: number): string {
+function padId(id: string): string {
   // pad pokemon ID with leading zeroes
   let paddedStr = "" + id;
   while (paddedStr.length < 4) {
@@ -13,7 +13,7 @@ function padId(id: number): string {
   return paddedStr;
 }
 
-function getPokemonSpriteSrc(id: number): string {
+function getPokemonSpriteSrc(id: string): string {
   const imgFileName = padId(id);
   return "/sprites/pokemon/" + imgFileName + ".webp";
 }

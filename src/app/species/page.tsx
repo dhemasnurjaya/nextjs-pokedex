@@ -8,7 +8,7 @@ type SpeciesPageProps = {
 };
 
 export default async function SpeciesPage(props: SpeciesPageProps) {
-  const itemsPerPage = 24;
+  const itemsPerPage = 21;
   const searchParams = await props.searchParams;
   const query = searchParams?.query || "";
   const currentPage = Number(searchParams?.page) || 1;
@@ -20,7 +20,7 @@ export default async function SpeciesPage(props: SpeciesPageProps) {
   });
 
   return (
-    <div className="flex flex-col grow gap-4">
+    <div className="flex flex-col grow gap-4 items-center">
       <SpeciesSearch />
       <SpeciesGrid
         query={query}

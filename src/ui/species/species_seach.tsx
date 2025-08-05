@@ -21,7 +21,7 @@ export default function SpeciesSearch() {
   }, 300);
 
   return (
-    <div className="relative w-xs flex shrink">
+    <div className="relative flex w-full sm:w-xs">
       <label htmlFor="search" className="sr-only">
         Search
       </label>

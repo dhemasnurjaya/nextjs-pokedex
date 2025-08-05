@@ -20,7 +20,7 @@ function getPokemonSpriteSrc(id: string): string {
 
 export default async function SpeciesCard({ species }: { species: Species }) {
   return (
-    <Card className="relative overflow-hidden p-0">
+    <Card className="relative overflow-hidden p-0 w-full xs:w-[11.5rem] md:w-[12rem]">
       <SpeciesBackground
         types={species.types}
         className="absolute w-full h-3/4 z-0"

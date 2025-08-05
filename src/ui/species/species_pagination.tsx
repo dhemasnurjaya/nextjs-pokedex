@@ -118,7 +118,7 @@ function generatePagination(
   currentPage: number,
   totalPages: number
 ): PaginationProps[] {
-  const window = 3;
+  const window = 1;
   const expectedRange = window * 2;
   let start = Math.max(1, currentPage - window);
   let end = Math.min(totalPages, currentPage + window);

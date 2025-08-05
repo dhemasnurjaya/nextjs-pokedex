@@ -18,5 +18,7 @@ export default async function SpeciesGrid(props: SpeciesGridProps) {
     <SpeciesCard key={s.name} species={s} />
   ));
 
-  return <div className="flex flex-wrap w-full gap-4">{speciesCards}</div>;
+  return (
+    <div className="flex flex-wrap gap-4 justify-center">{speciesCards}</div>
+  );
 }
